@@ -5,22 +5,24 @@ import { glob } from 'glob'
 import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
 import { libInjectCss } from 'vite-plugin-lib-inject-css'
+import svgrPlugin from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     libInjectCss(),
+    svgrPlugin(),
     dts({ include: ['lib'] })
   ],
   build: {
     copyPublicDir: false,
     lib: {
       entry: resolve(__dirname, 'lib/main.ts'),
-      formats: ['es']
+      formats: ['es', 'cjs']
     },
     rollupOptions: {
-      external: ['react', 'react/jsx-runtime'],
+      external: ['react', 'reactDom', 'react/jsx-runtime'],
       input: Object.fromEntries(
         // https://rollupjs.org/configuration-options/#input
         glob.sync('lib/**/*.{ts,tsx}').map(file => [
@@ -34,6 +36,7 @@ export default defineConfig({
         ])
       ),
       output: {
+        globals: { react: 'React' },
         assetFileNames: 'assets/[name][extname]',
         entryFileNames: '[name].js',
       }
