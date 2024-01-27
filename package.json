@@ -1,7 +1,6 @@
 {
   "name": "@314oner/universal-components-library",
   "version": "0.0.3",
-  "private": false,
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
@@ -9,9 +8,10 @@
     "dist",
     "README.md"
   ],
+  "author": "Alexander Gverdtsiteli",
   "repository": {
     "type": "git",
-    "url": "https://github.com/314oner/universal-components-library"
+    "url": "https://github.com/314oner/universal-components-library.git"
   },
   "sideEffects": [
     "**/*.css"
@@ -22,7 +22,9 @@
     "vite:build": "vite build && tsc  && cp package.json README.md ./dist",
     "npm:build": "NODE_ENV=production babel lib --out-dir dist --copy-files",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "rm -rf dist && npm run build",
+    "postbuild": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz"
   },
   "peerDependencies": {
     "react": "16.8 - 18",
@@ -115,5 +117,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Component library",
+  "license": "UNLICENSED"
 }
