@@ -4,52 +4,23 @@
 
 ### Universal Components Library
 
-**Universal Components Library** is available as an [npm package](https://www.npmjs.com/package/@314oner/universal-components-library).
+**Universal Components Library** is available as an [npm package](https://www.npmjs.com/package/@314oner_npm/universal-components-library).
 
 npm:
 
 ```bash
-npm install @314oner/universal-components-library
+npm install @314oner_npm/universal-components-library
 ```
 yarn:
 
 ```bash
-yarn add @314oner/universal-components-library
+yarn add @314oner_npm/universal-components-library
 ```
-
-### Styles
-
-```ts
-import '@314oner/universal-components-library/dist/style.css';
-```
-The entry point of your application: `main.js` | `main.ts` | `index.js` | `index.ts`
-```ts
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
-// ! This line ⬇️⬇️⬇️
-import '@314oner/universal-components-library/dist/style.css';
-
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
-```
-
 ## Getting started with Universal Components Library
 ***
 ```ts
-import './App.css'
 
-import {Text} from '@314oner/universal-components-library';
-
-function App() {
-  return <Text bold color={"blue"}>Hello World 🤍</Text>
-}
-
-export default App
+import {Text} from '@314oner_npm/universal-components-library';
 ```
 
 # 📩 Latest Videos
