@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
     --text-primary: #f4f5f9;
     --text-secondary: #a9abb6;

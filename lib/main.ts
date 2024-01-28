@@ -1,4 +1,5 @@
 import './global.css';
-export { Button } from './components/Button'
+export { DefaultButton } from './components/DefaultButton'
+export { DefaultLongButton } from './components/DefaultLongButton'
 export { Input } from './components/Input'
 export { Label } from './components/Label'
