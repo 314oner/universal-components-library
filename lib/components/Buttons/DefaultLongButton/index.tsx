@@ -20,7 +20,7 @@ export declare interface IDefaultLongButtonProps extends React.ButtonHTMLAttribu
 }
 
 export const DefaultLongButton = React.forwardRef<HTMLButtonElement, IDefaultLongButtonProps>(
-  ({ success = true, size = "medium", color, onClick, className = styles.button, ...rest }, ref) => {
+  ({ success = true, size = "medium", color, className = styles.button, ...rest }, ref) => {
     const isSuccess = success ?
       styles.button_blue
       :

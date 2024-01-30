@@ -12,7 +12,7 @@ export declare interface IDefaultButtonProps extends React.ButtonHTMLAttributes<
 }
 
 export const DefaultButton = React.forwardRef<HTMLButtonElement, IDefaultButtonProps>(
-  ({ success = true, typical = false, onClick, className = styles.button, ...rest }, ref) => {
+  ({ success = true, typical = false, className = styles.button, ...rest }, ref) => {
     const isTypical = typical ? (success ? `border-[#9FB8AB]` : `border-[#E996B0]`) : `border-[#4B4B4B]`
     return (
       <button

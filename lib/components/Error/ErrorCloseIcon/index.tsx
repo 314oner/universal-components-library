@@ -2,7 +2,7 @@ import React, { MouseEventHandler } from 'react';
 
 export interface Props {
   onClick: MouseEventHandler<HTMLDivElement>
-  style: {};
+  style: object;
 }
 
 export const ErrorCloseIcon = React.forwardRef<HTMLDivElement, Props>(
