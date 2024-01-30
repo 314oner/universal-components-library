@@ -19,7 +19,7 @@ yarn add @314oner_npm/universal-components-library
 ## Getting started with Universal Components Library
 ***
 ```ts
-import {DefaultButton, DefaultLongButton, Input, Label} from '@314oner_npm/universal-components-library';
+import {DefaultButton, DefaultLongButton, Input, Label, StylizedText, Error} from '@314oner_npm/universal-components-library';
 ```
 
 # 📩 Latest Videos
