@@ -4,3 +4,7 @@ storybook-static
 coverage
 tsconfig.tsbuildinfo
 vite.config.ts.timestamp-*
+.yarn/install-state.gz
+.yarn/cache
+.yarn/unplugged
+.pnp.cjs
