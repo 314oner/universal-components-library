@@ -13,7 +13,7 @@ export default defineConfig({
     react(),
     libInjectCss(),
     svgrPlugin(),
-    dts({ include: ['lib'] })
+    dts({ include: ['lib'], exclude: ['**/*.stories.tsx'] })
   ],
   build: {
     copyPublicDir: false,
@@ -25,7 +25,7 @@ export default defineConfig({
       external: ['react', 'reactDom', 'react/jsx-runtime'],
       input: Object.fromEntries(
         // https://rollupjs.org/configuration-options/#input
-        glob.sync('lib/**/*.{ts,tsx}').map(file => [
+        glob.sync('lib/**/*.{ts,tsx}', { ignore: 'lib/**/*.stories.tsx' }).map(file => [
           // 1. The name of the entry point
           relative(
             'lib',
@@ -39,7 +39,8 @@ export default defineConfig({
         globals: { react: 'React' },
         assetFileNames: 'assets/[name][extname]',
         entryFileNames: '[name].js',
-      }
+      },
+
     }
   }
 })
