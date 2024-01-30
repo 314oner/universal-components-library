@@ -23,7 +23,8 @@
     "build": "tsc --p ./tsconfig-build.json && rm -rf ./dist && vite build",
     "prepublishOnly": "rm -rf dist && npm run build",
     "postbuild": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
-    "sb": "storybook dev -p 6006"
+    "sb": "storybook dev -p 6006",
+    "prepare": "husky install"
   },
   "peerDependencies": {
     "react": "16.8 - 18",
