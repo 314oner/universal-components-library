@@ -1,0 +1,31 @@
+.DefaultAlert {
+  border-width: 2px;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  box-shadow: 5px 5px 0px 0px rgba(67, 133, 0, 0.2);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 1000ms;
+}
+
+.DefaultAlert:hover {
+  box-shadow: 0 0 #0000;
+}
+
+.DefaultAlert:active {
+  box-shadow: 0 0 #0000;
+}
+
+.DefaultAlert_dark {
+  color: inherit;
+  background-color: inherit;
+  box-shadow: 5px 5px 0px 0px rgba(67, 133, 0, 1);
+}
+
+.DefaultAlert_dark:hover {
+  box-shadow: 0 0 #0000;
+}
+
+.DefaultAlert_dark:active {
+  box-shadow: 0 0 #0000;
+}

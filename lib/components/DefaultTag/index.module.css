@@ -1,0 +1,24 @@
+.DefaultTag {
+  display: inline-flex;
+  color: white; /* TODO: invert */
+  background-color: rgba(67, 133, 0, 1);
+  border-color: rgba(67, 133, 0, 1);
+  border-width: 2px;
+  border-radius: 0.375rem;
+  align-items: center;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.DefaultTag:hover {
+  background-color: rgba(67, 133, 0, 0.5);
+}
+
+.DefaultTag_dark {
+  background-color: #ffffff;
+}

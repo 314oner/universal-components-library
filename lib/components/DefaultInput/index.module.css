@@ -1,0 +1,9 @@
+.DefaultInput {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.DefaultInput_dark {
+  color: inherit;
+  background-color: inherit;
+}

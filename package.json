@@ -17,9 +17,7 @@
     "**/*.css"
   ],
   "scripts": {
-    "dev": "vite",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
     "build": "tsc --p ./tsconfig-build.json && rm -rf ./dist && vite build",
     "prepublishOnly": "rm -rf dist && npm run build",
     "postbuild": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",

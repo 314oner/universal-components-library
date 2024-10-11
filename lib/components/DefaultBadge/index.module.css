@@ -1,0 +1,36 @@
+.DefaultBadge {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  border-width: 1px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.DefaultBadge:hover {
+  box-shadow: 3px 3px 0px 0px rgba(67, 133, 0, 0.4);
+}
+
+.DefaultBadge:active {
+  box-shadow: 3px 3px 0px 0px rgba(67, 133, 0, 0.4);
+}
+
+.DefaultBadge_dark {
+  background-color: #ffffff;
+}
+
+.DefaultBadge_dark:hover {
+  background-color: #c5b8b8;
+}
+
+.DefaultBadge_dark:active {
+  background-color: #a79797;
+}

@@ -1,0 +1,11 @@
+.DefaultAccordion {
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+}
+
+.DefaultAccordion_dark {
+  color: inherit;
+  background-color: inherit;
+}
