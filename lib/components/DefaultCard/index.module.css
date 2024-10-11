@@ -1,0 +1,31 @@
+.DefaultCard {
+  max-width: 24rem;
+  border-width: 2px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 #0000;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.DefaultCard:hover {
+  box-shadow: 7px 7px 0px 0px rgba(67, 133, 0, 0.5);
+}
+
+.DefaultCard:active {
+  box-shadow: 7px 7px 0px 0px rgba(67, 133, 0, 0.5);
+}
+
+.DefaultCard_dark {
+  color: inherit;
+  background-color: #ffffff;
+}
+
+.DefaultCard_dark:hover {
+  box-shadow: 7px 7px 0px 0px rgba(67, 133, 0, 1);
+}
+
+.DefaultCard_dark:active {
+  box-shadow: 7px 7px 0px 0px rgba(67, 133, 0, 1);
+}

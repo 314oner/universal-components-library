@@ -1,0 +1,8 @@
+.DefaultAccordion {
+  display: inline-block;
+  position: relative;
+}
+
+.DefaultAccordion_dark {
+  background-color: #ffffff;
+}

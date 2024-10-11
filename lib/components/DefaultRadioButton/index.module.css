@@ -1,0 +1,9 @@
+.DefaultRadioButton {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.DefaultRadioButton_dark {
+  background-color: #ffffff;
+}

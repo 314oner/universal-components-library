@@ -1,0 +1,13 @@
+.DefaultAvatar {
+  border-radius: 9999px;
+  object-fit: cover;
+  border-width: 2px;
+  box-shadow:
+    0 10px 15px -3px rgb(67, 133, 0, 1),
+    0 4px 6px -4px rgb(67, 133, 0, 1);
+}
+
+.DefaultAvatar_dark {
+  color: inherit;
+  background-color: inherit;
+}

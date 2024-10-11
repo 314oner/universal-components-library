@@ -1,0 +1,9 @@
+.DefaultSpinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.DefaultSpinner_dark {
+  background-color: #ffffff;
+}
