@@ -13,11 +13,12 @@ const variants = {
   large: 'w-96',
 } as const;
 //@ts-ignore
-export declare interface IDefaultInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export declare interface IDefaultInputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
   icon?: React.ReactNode;
-  className?: undefined;
+  className?: string;
   color?: 'primary' | 'dark';
   size?: 'small' | 'medium' | 'large';
 }
@@ -57,7 +58,9 @@ export const DefaultInput: React.FC<IDefaultInputProps> = ({
         )}
         <input
           {...props}
-          className={`w-full px-4 py-2 ${icon ? 'pl-10' : ''} text-[#0B2447] dark:text-white bg-white dark:bg-gray-800 border-2 border-[#0B2447] dark:border-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#0B2447] dark:focus:ring-white transition-all duration-300 ${
+          className={`w-full px-4 py-2 ${
+            icon ? 'pl-10' : ''
+          } text-[#0B2447] dark:text-white bg-white dark:bg-gray-800 border-2 border-[#0B2447] dark:border-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#0B2447] dark:focus:ring-white transition-all duration-300 ${
             error
               ? 'border-red-500 dark:border-red-400 focus:ring-red-500 dark:focus:ring-red-400'
               : ''
@@ -65,7 +68,9 @@ export const DefaultInput: React.FC<IDefaultInputProps> = ({
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
         />
-        {error && <p className="mt-2 text-sm text-red-600 dark:text-red-400">{error}</p>}
+        {error && (
+          <p className="mt-2 text-sm text-red-600 dark:text-red-400">{error}</p>
+        )}
       </div>
     </div>
   );

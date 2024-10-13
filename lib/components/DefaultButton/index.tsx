@@ -22,8 +22,9 @@ const variants = {
     'text-[#FB923C] dark:text-[#FDBA74] border-[#FB923C] dark:border-[#FDBA74] shadow-[7px_7px_0px_0px_#FB923C] dark:shadow-[7px_7px_0px_0px_#FDBA74] hover:shadow-none',
 } as const;
 
-export declare interface IDefaultButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+export declare interface IDefaultButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children?: React.ReactNode;
   onClick?: () => void;
   color?: 'default' | 'cyan' | 'blue' | 'yellow' | 'orange';
   icon?: React.ReactNode;
