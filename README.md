@@ -17,7 +17,7 @@ npm install @314oner_npm/universal-components-library
 ---
 
 ```ts
-import {universal-components-library
+import {
   DefaultButton,
   DefaultCheckbox,
   DefaultInput,
@@ -25,6 +25,8 @@ import {universal-components-library
   Input,
   Label,
   RefButton,
+  DefaultBadge,
+  DefaultTooltip
 } from "@314oner_npm/universal-components-library";
 ```
 
