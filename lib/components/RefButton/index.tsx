@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import clsx from 'clsx';
-import React, { MouseEventHandler } from 'react';
+import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import styles from './index.module.css';
 
@@ -12,18 +12,20 @@ const variants = {
   large: 'w-96',
 } as const;
 
-export declare interface IRefButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  onClick: MouseEventHandler<HTMLElement>;
+export declare interface IRefButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  onClick?: () => void;
   success?: boolean;
   typical?: boolean;
-  size?: string;
+  color?: 'primary' | 'dark';
+  size?: 'small' | 'medium' | 'large';
 }
 
 export const RefButton = React.forwardRef<HTMLButtonElement, IRefButtonProps>(
   (
     {
       success = true,
-      color,
+      color = 'primary',
       size,
       typical = false,
       onClick,

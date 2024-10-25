@@ -3,7 +3,12 @@
   align-items: center;
   cursor: pointer;
 }
-
+input[type='radio']:disabled,
+input[type='radio']:disabled + span {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 .DefaultRadioButton_dark {
-  background-color: #ffffff;
+  color: inherit;
+  background-color: inherit;
 }

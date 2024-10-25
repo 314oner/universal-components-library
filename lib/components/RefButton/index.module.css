@@ -5,65 +5,46 @@
   border-radius: 8px;
   display: inline-block;
   cursor: pointer;
-  /* box-sizing: border-box; */
   border: 2px solid #4b4b4b7b;
-  transition:
-    padding 0.07s,
-    border-radius 0.1s,
-    background-color 0.2s,
-    transform 0.2s;
+  background-color: black;
 }
 
-.RefButton:active {
-  animation-duration: 0.3s;
-  animation-name: bulp;
-  animation-iteration-count: 1;
-}
-
-@keyframes bulp {
-  from {
-    padding: 6px 88px;
-    border-radius: 8px;
-    cursor: pointer;
-    box-sizing: border-box;
-    border: 2px solid #4b4b4b7b;
-  }
-
-  25% {
-    border: 2px solid #3030307b;
-    border-radius: 6px;
-    padding: 6px 85px;
-  }
-
-  75% {
-    border: 2px solid #6666667b;
-    padding: 6px 91px;
-    border-radius: 10px;
-  }
-
-  to {
-    padding: 6px 88px;
-    border-radius: 8px;
-    cursor: pointer;
-    box-sizing: border-box;
-    border: 2px solid #4b4b4b7b;
-  }
-}
-
-.RefButton_dark {
-  background-color: #383838;
-}
-
-.RefButton_dark:hover {
+.RefButton:hover {
   background-color: #252525;
 }
 
+.RefButton:active {
+  background-color: #231d1d;
+}
+
+.RefButton_dark {
+  color: black;
+  padding: 6px 88px;
+  border-width: 6px;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid #4b4b4b7b;
+  background-color: white;
+}
+
+.RefButton_dark:hover {
+  background-color: #f0e6e6;
+}
+
 .RefButton_dark:active {
-  background-color: #0e0e0e;
+  background-color: #d8cdcd;
 }
 
 .RefButton_blue {
-  background-color: #6e9da6;
+  color: white;
+  padding: 6px 88px;
+  border-width: 6px;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid #4b4b4b7b;
+  background-color: rgb(14 116 144);
 }
 
 .RefButton_blue:hover {

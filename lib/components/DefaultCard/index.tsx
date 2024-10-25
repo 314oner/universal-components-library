@@ -11,7 +11,8 @@ const variants = {
   large: 'w-96',
 } as const;
 
-export declare interface IDefaultCardProps extends React.HTMLAttributes<HTMLDivElement> {
+export declare interface IDefaultCardProps
+  extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   description: string;
   imageUrl?: string;
@@ -24,7 +25,7 @@ export const DefaultCard: React.FC<IDefaultCardProps> = ({
   description,
   imageUrl,
   size,
-  color,
+  color = 'primary',
   className = styles.DefaultCard,
 }) => {
   return (
@@ -38,17 +39,11 @@ export const DefaultCard: React.FC<IDefaultCardProps> = ({
       )}
     >
       {imageUrl && (
-        <img
-          className="object-cover w-full h-48"
-          src={imageUrl}
-          alt={title}
-        />
+        <img className="object-cover w-full h-68" src={imageUrl} alt={title} />
       )}
       <div className="p-5">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-[#0B2447] dark:text-white">
-          {title}
-        </h5>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-300">{description}</p>
+        <h5 className="mb-2 text-2xl font-bold tracking-tight">{title}</h5>
+        <p className="mb-3 font-normal">{description}</p>
         <a
           href="#"
           className="inline-flex items-center px-3 py-2 text-sm font-medium text-white dark:text-[#0B2447] bg-[#0B2447] dark:bg-white rounded-md hover:bg-[#0B2447]/80 dark:hover:bg-white/80 transition-colors duration-300"

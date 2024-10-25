@@ -20,22 +20,36 @@ const variants = {
   pink: 'bg-pink-100 text-pink-800 border-pink-800 dark:bg-pink-900 dark:text-pink-200 dark:border-pink-200',
 } as const;
 
-export declare interface IDefaultBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
+export declare interface IDefaultBadgeProps
+  extends React.HTMLAttributes<HTMLDivElement> {
   text: string;
-  color?: 'primary' | 'dark' | 'gray' | 'red' | 'yellow' | 'green' | 'blue' | 'indigo' | 'purple';
+  color?:
+    | 'primary'
+    | 'dark'
+    | 'gray'
+    | 'red'
+    | 'yellow'
+    | 'green'
+    | 'blue'
+    | 'indigo'
+    | 'purple';
 }
 
 export const DefaultBadge: React.FC<IDefaultBadgeProps> = ({
   text,
-  color,
+  color = 'primary',
   className = styles.DefaultBadge,
 }) => {
   return (
-      <div>
-        <span className={twMerge(clsx(variants[color as keyof typeof variants], className))}>
-          {text}
-        </span>
-      </div>
+    <div>
+      <span
+        className={twMerge(
+          clsx(variants[color as keyof typeof variants], className),
+        )}
+      >
+        {text}
+      </span>
+    </div>
   );
 };
 

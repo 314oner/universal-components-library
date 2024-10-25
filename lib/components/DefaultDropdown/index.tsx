@@ -7,7 +7,7 @@ import styles from './index.module.css';
 const variants = {
   primary: styles.DefaultDropdown,
   dark: styles.DefaultDropdown_dark,
-  small: 'inline-block',
+  small: 'w-32',
   medium: 'w-64',
   large: 'w-96',
 } as const;
@@ -16,7 +16,7 @@ const variants = {
 export declare interface IDefaultDropdownProps extends React.HTMLAttributes<HTMLDivElement> {
   options: string[];
   onSelect: (option: string) => void;
-  placeholder?: string;
+  placeholder: string;
   color?: 'primary' | 'dark';
   size?: 'small' | 'medium' | 'large';
 }
@@ -25,7 +25,7 @@ export const DefaultDropdown: React.FC<IDefaultDropdownProps> = ({
   options,
   placeholder = 'Выберите опцию',
   onSelect,
-  color,
+  color = 'primary',
   size,
   className = styles.DefaultDropdown,
 }) => {
@@ -37,7 +37,6 @@ export const DefaultDropdown: React.FC<IDefaultDropdownProps> = ({
     onSelect(option);
     setIsOpen(false);
   };
-
   return (
     <div
       className={twMerge(
@@ -51,7 +50,7 @@ export const DefaultDropdown: React.FC<IDefaultDropdownProps> = ({
       <div>
         <button
           type="button"
-          className="inline-flex justify-center w-full rounded-md border-2 border-[#0B2447] dark:border-white shadow-[5px_5px_0px_0px_#0B2447] dark:shadow-[5px_5px_0px_0px_#ffffff] px-4 py-2 bg-white dark:bg-gray-800 text-sm font-medium text-[#0B2447] dark:text-white hover:bg-[#0B2447]/10 dark:hover:bg-white/10 focus:outline-none transition-all duration-300"
+          className="inline-flex justify-center w-full rounded-md border-2 border-[#0B2447] dark:border-white shadow-[3px_3px_0px_0px_#0B2447] dark:shadow-[3px_3px_0px_0px_#ffffff] px-4 py-2 bg-white dark:bg-gray-800 text-sm font-medium hover:bg-[#0B2447]/10 dark:hover:bg-white/10 focus:outline-none transition-all duration-300"
           onClick={() => setIsOpen(!isOpen)}
         >
           {selectedOption || placeholder}
@@ -71,7 +70,7 @@ export const DefaultDropdown: React.FC<IDefaultDropdownProps> = ({
         </button>
       </div>
       {isOpen && (
-        <div className="absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg dark:bg-gray-800 ring-1 ring-black ring-opacity-5 dark:ring-white dark:ring-opacity-5">
+        <div className="absolute right-0 z-50 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg dark:bg-gray-800 ring-1 ring-black ring-opacity-5 dark:ring-white dark:ring-opacity-5">
           <div
             className="py-1"
             role="menu"
@@ -82,7 +81,7 @@ export const DefaultDropdown: React.FC<IDefaultDropdownProps> = ({
               <a
                 key={option}
                 href="#"
-                className="block px-4 py-2 text-sm text-[#0B2447] dark:text-white hover:bg-[#0B2447]/10 dark:hover:bg-white/10"
+                className="block px-4 py-2 text-sm hover:bg-[#0B2447]/10 dark:hover:bg-white/10"
                 role="menuitem"
                 onClick={(e) => {
                   e.preventDefault();

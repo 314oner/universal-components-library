@@ -24,7 +24,7 @@ export declare interface IDefaultTagProps extends React.HTMLAttributes<any> {
 export const DefaultTag: React.FC<IDefaultTagProps> = ({
   text,
   onRemove,
-  color,
+  color = 'primary',
   className = styles.DefaultTag,
   size,
 }) => {
