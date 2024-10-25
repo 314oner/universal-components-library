@@ -4,5 +4,6 @@
 }
 
 .DefaultAccordion_dark {
-  background-color: #ffffff;
+  color: inherit;
+  background-color: inherit;
 }

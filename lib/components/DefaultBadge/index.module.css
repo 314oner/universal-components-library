@@ -15,22 +15,7 @@
   transition-duration: 300ms;
 }
 
-.DefaultBadge:hover {
-  box-shadow: 3px 3px 0px 0px rgba(67, 133, 0, 0.4);
-}
-
-.DefaultBadge:active {
-  box-shadow: 3px 3px 0px 0px rgba(67, 133, 0, 0.4);
-}
-
 .DefaultBadge_dark {
-  background-color: #ffffff;
-}
-
-.DefaultBadge_dark:hover {
-  background-color: #c5b8b8;
-}
-
-.DefaultBadge_dark:active {
-  background-color: #a79797;
+  color: inherit;
+  background-color: inherit;
 }

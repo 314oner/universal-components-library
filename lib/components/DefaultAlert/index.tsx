@@ -5,7 +5,6 @@ import styles from './index.module.css';
 
 const variants = {
   primary: styles.DefaultAlert,
-  dark: styles.DefaultAlert_dark,
   small: 'inline-block',
   medium: 'w-80',
   large: 'w-96',
@@ -16,16 +15,14 @@ const variants = {
 } as const;
 
 export declare interface IDefaultAlertProps extends React.HTMLAttributes<HTMLDivElement> {
-  type: 'success' | 'warning' | 'error' | 'info';
+  type: 'primary' | 'success' | 'warning' | 'error' | 'info';
   message: string;
-  color?: 'primary' | 'dark';
   size?: 'small' | 'medium' | 'large';
 }
 
 export const DefaultAlert: React.FC<IDefaultAlertProps> = ({
-  type,
+  type = 'primary',
   message,
-  color,
   size,
   className = styles.DefaultAlert,
 }) => {
@@ -33,7 +30,6 @@ export const DefaultAlert: React.FC<IDefaultAlertProps> = ({
     <div
       className={twMerge(
         clsx(
-          variants[color as keyof typeof variants],
           variants[size as keyof typeof variants],
           variants[type as keyof typeof variants],
           className,

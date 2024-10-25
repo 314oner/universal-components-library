@@ -28,9 +28,9 @@ export const DefaultInput: React.FC<IDefaultInputProps> = ({
   error,
   icon,
   size,
-  color,
+  color = 'primary',
   className = styles.DefaultInput,
-  ...props
+  ...rest
 }) => {
   //@ts-ignore
   const [isFocused, setIsFocused] = useState(false);
@@ -46,9 +46,7 @@ export const DefaultInput: React.FC<IDefaultInputProps> = ({
       )}
     >
       {label && (
-        <label className="block text-sm font-medium text-[#0B2447] dark:text-white mb-1">
-          {label}
-        </label>
+        <label className="block mb-1 text-sm font-medium">{label}</label>
       )}
       <div className="relative">
         {icon && (
@@ -57,10 +55,10 @@ export const DefaultInput: React.FC<IDefaultInputProps> = ({
           </div>
         )}
         <input
-          {...props}
+          {...rest}
           className={`w-full px-4 py-2 ${
             icon ? 'pl-10' : ''
-          } text-[#0B2447] dark:text-white bg-white dark:bg-gray-800 border-2 border-[#0B2447] dark:border-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#0B2447] dark:focus:ring-white transition-all duration-300 ${
+          } bg-white dark:bg-gray-800 border-2 border-[#0B2447] dark:border-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#0B2447] dark:focus:ring-white transition-all duration-300 ${
             error
               ? 'border-red-500 dark:border-red-400 focus:ring-red-500 dark:focus:ring-red-400'
               : ''

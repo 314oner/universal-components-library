@@ -13,7 +13,8 @@ const variants = {
   large: 'w-16 h-16',
 } as const;
 
-export declare interface IDefaultAvatarProps extends React.HTMLAttributes<HTMLDivElement> {
+export declare interface IDefaultAvatarProps
+  extends React.HTMLAttributes<HTMLDivElement> {
   src: string;
   alt: string;
   color?: 'primary' | 'dark';
@@ -23,22 +24,22 @@ export declare interface IDefaultAvatarProps extends React.HTMLAttributes<HTMLDi
 export const DefaultAvatar: React.FC<IDefaultAvatarProps> = ({
   src,
   alt,
-  color,
+  color = 'primary',
   size,
   className = styles.DefaultAvatar,
 }) => {
   return (
-      <img
-        className={twMerge(
-          clsx(
-            variants[color as keyof typeof variants],
-            variants[size as keyof typeof variants],
-            className,
-          ),
-        )}
-        src={src}
-        alt={alt}
-      />
+    <img
+      className={twMerge(
+        clsx(
+          variants[color as keyof typeof variants],
+          variants[size as keyof typeof variants],
+          className,
+        ),
+      )}
+      src={src}
+      alt={alt}
+    />
   );
 };
 
