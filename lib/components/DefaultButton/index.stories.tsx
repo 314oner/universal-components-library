@@ -9,7 +9,7 @@ export const Default: StoryFn<IDefaultButtonProps> = (args) => <DefaultButton {.
 Default.args = {
   children: <>DefaultButton children </>,
   onClick: () => {},
-  color: 'default',
+  color: 'primary',
   icon: (
     <>
       <svg
