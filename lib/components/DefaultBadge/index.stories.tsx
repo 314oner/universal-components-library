@@ -5,38 +5,26 @@ export default {
   component: DefaultBadge,
 };
 
-export const Gray: StoryFn<IDefaultBadgeProps> = (args) => <DefaultBadge {...args} />;
-Gray.args = {
+export const Info: StoryFn<IDefaultBadgeProps> = (args) => <DefaultBadge {...args} />;
+Info.args = {
   text: 'DefaultBadge',
-  color: 'gray',
+  type: 'info',
 };
 
-export const Red: StoryFn<IDefaultBadgeProps> = (args) => <DefaultBadge {...args} />;
-Red.args = {
+export const Error: StoryFn<IDefaultBadgeProps> = (args) => <DefaultBadge {...args} />;
+Error.args = {
   text: 'DefaultBadge',
-  color: 'red',
+  type: 'error',
 };
 
-export const Yellow: StoryFn<IDefaultBadgeProps> = (args) => <DefaultBadge {...args} />;
-Yellow.args = {
+export const Warning: StoryFn<IDefaultBadgeProps> = (args) => <DefaultBadge {...args} />;
+Warning.args = {
   text: 'DefaultBadge',
-  color: 'yellow',
+  type: 'warning',
 };
 
-export const Green: StoryFn<IDefaultBadgeProps> = (args) => <DefaultBadge {...args} />;
-Green.args = {
+export const Success: StoryFn<IDefaultBadgeProps> = (args) => <DefaultBadge {...args} />;
+Success.args = {
   text: 'DefaultBadge',
-  color: 'green',
-};
-
-export const Indigo: StoryFn<IDefaultBadgeProps> = (args) => <DefaultBadge {...args} />;
-Indigo.args = {
-  text: 'DefaultBadge',
-  color: 'indigo',
-};
-
-export const Purple: StoryFn<IDefaultBadgeProps> = (args) => <DefaultBadge {...args} />;
-Purple.args = {
-  text: 'DefaultBadge',
-  color: 'purple',
+  type: 'success',
 };

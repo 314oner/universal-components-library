@@ -8,7 +8,3 @@ input[type='radio']:disabled + span {
   opacity: 0.5;
   cursor: not-allowed;
 }
-.DefaultRadioButton_dark {
-  color: inherit;
-  background-color: inherit;
-}
