@@ -12,20 +12,3 @@
 .DefaultCard:hover {
   box-shadow: 6px 6px 0px 0px rgba(67, 133, 0, 0.5);
 }
-
-.DefaultCard:active {
-  box-shadow: 6px 6px 0px 0px rgba(67, 133, 0, 0.5);
-}
-
-.DefaultCard_dark {
-  color: inherit;
-  background-color: inherit;
-}
-
-.DefaultCard_dark:hover {
-  box-shadow: 6px 6px 0px 0px rgba(67, 133, 0, 1);
-}
-
-.DefaultCard_dark:active {
-  box-shadow: 6px 6px 0px 0px rgba(67, 133, 0, 1);
-}

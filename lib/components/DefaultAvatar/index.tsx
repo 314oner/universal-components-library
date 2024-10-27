@@ -7,17 +7,16 @@ import styles from './index.module.css';
 
 const variants = {
   primary: styles.DefaultAvatar,
-  dark: styles.DefaultAvatar_dark,
-  small: 'w-8 h-8',
-  medium: 'w-12 h-12',
-  large: 'w-16 h-16',
+  small: 'w-8',
+  medium: 'w-16',
+  large: 'w-32',
 } as const;
 
 export declare interface IDefaultAvatarProps
   extends React.HTMLAttributes<HTMLDivElement> {
   src: string;
   alt: string;
-  color?: 'primary' | 'dark';
+  color?: 'primary';
   size?: 'small' | 'medium' | 'large';
 }
 

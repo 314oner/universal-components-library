@@ -2,6 +2,7 @@ export { DefaultAccordion } from './components/DefaultAccordion';
 export { DefaultAlert } from './components/DefaultAlert';
 export { DefaultAvatar } from './components/DefaultAvatar';
 export { DefaultBadge } from './components/DefaultBadge';
+export { DefaultBreadcrumb } from './components/DefaultBreadcrumb';
 export { DefaultButton } from './components/DefaultButton';
 export { DefaultCard } from './components/DefaultCard';
 export { DefaultCheckbox } from './components/DefaultCheckbox';

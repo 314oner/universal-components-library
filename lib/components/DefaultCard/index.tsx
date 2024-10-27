@@ -5,7 +5,6 @@ import styles from './index.module.css';
 
 const variants = {
   primary: styles.DefaultCard,
-  dark: styles.DefaultCard_dark,
   small: 'w-72',
   medium: 'w-80',
   large: 'w-96',
@@ -16,7 +15,7 @@ export declare interface IDefaultCardProps
   title: string;
   description: string;
   imageUrl?: string;
-  color?: 'primary' | 'dark';
+  color?: 'primary';
   size?: 'small' | 'medium' | 'large';
 }
 

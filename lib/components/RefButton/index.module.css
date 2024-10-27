@@ -29,10 +29,12 @@
 }
 
 .RefButton_dark:hover {
+  color: white;
   background-color: #f0e6e6;
 }
 
 .RefButton_dark:active {
+  color: white;
   background-color: #d8cdcd;
 }
 

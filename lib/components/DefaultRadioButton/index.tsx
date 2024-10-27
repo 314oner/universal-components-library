@@ -7,17 +7,17 @@ import styles from './index.module.css';
 
 const variants = {
   primary: styles.DefaultRadioButton,
-  dark: styles.DefaultRadioButton_darks,
 } as const;
 //@ts-ignore
-export declare interface IDefaultRadioButtonProps extends React.HTMLAttributes<any> {
+export declare interface IDefaultRadioButtonProps
+  extends React.HTMLAttributes<any> {
   label: string;
   name: string;
   value: string;
   checked?: boolean;
   onChange?: (value: string) => void;
   disabled?: boolean;
-  color?: 'primary' | 'dark';
+  color?: 'primary';
 }
 
 export const DefaultRadioButton: React.FC<IDefaultRadioButtonProps> = ({
@@ -34,7 +34,11 @@ export const DefaultRadioButton: React.FC<IDefaultRadioButtonProps> = ({
     'form-radio h-5 w-5 border-2 border-[#0B2447] dark:border-white focus:ring-[#0B2447] dark:focus:ring-white focus:ring-offset-2 dark:focus:ring-offset-gray-800 focus:ring-2 bg-white dark:bg-gray-700 transition-all duration-300';
   const labelStyles = 'ml-2 text-sm font-medium';
   return (
-    <label className={twMerge(clsx(variants[color as keyof typeof variants], className))}>
+    <label
+      className={twMerge(
+        clsx(variants[color as keyof typeof variants], className),
+      )}
+    >
       <input
         type="radio"
         name={name}
