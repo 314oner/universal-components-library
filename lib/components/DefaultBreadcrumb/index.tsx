@@ -5,13 +5,12 @@ import styles from './index.module.css';
 
 const variants = {
   primary: styles.DefaultBreadcrumb,
-  dark: styles.DefaultBreadcrumb_dark,
 } as const;
 
 export declare interface IDefaultBreadcrumbProps
   extends React.HTMLAttributes<HTMLMenuElement> {
   items: { label: string; href?: string }[];
-  color?: 'primary' | 'dark';
+  color?: 'primary';
 }
 
 export const DefaultBreadcrumb: React.FC<IDefaultBreadcrumbProps> = ({

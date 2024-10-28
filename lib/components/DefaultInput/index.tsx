@@ -7,19 +7,17 @@ import styles from './index.module.css';
 
 const variants = {
   primary: styles.DefaultInput,
-  dark: styles.DefaultInput_dark,
   small: 'inline-block',
-  medium: 'w-64',
-  large: 'w-96',
+  medium: 'w-1/2',
+  large: 'w-full',
 } as const;
 //@ts-ignore
-export declare interface IDefaultInputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+export declare interface IDefaultInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
   icon?: React.ReactNode;
   className?: string;
-  color?: 'primary' | 'dark';
+  color?: 'primary';
   size?: 'small' | 'medium' | 'large';
 }
 
@@ -45,9 +43,7 @@ export const DefaultInput: React.FC<IDefaultInputProps> = ({
         ),
       )}
     >
-      {label && (
-        <label className="block mb-1 text-sm font-medium">{label}</label>
-      )}
+      {label && <label className="block mb-1 text-sm font-medium">{label}</label>}
       <div className="relative">
         {icon && (
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -66,9 +62,7 @@ export const DefaultInput: React.FC<IDefaultInputProps> = ({
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
         />
-        {error && (
-          <p className="mt-2 text-sm text-red-600 dark:text-red-400">{error}</p>
-        )}
+        {error && <p className="mt-2 text-sm text-red-600 dark:text-red-400">{error}</p>}
       </div>
     </div>
   );

@@ -9,12 +9,11 @@ const variants = {
   dark: styles.RefButton_dark,
   blue: styles.RefButton_blue,
   small: 'inline-block',
-  medium: 'w-min',
-  large: 'w-max',
+  medium: 'w-1/2',
+  large: 'w-full',
 } as const;
 
-export declare interface IRefButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export declare interface IRefButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void;
   success?: boolean;
   typical?: boolean;

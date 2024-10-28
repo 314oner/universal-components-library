@@ -6,16 +6,15 @@ import styles from './index.module.css';
 const variants = {
   primary: styles.DefaultAlert,
   small: 'inline-block',
-  medium: 'w-min',
-  large: 'w-max',
+  medium: 'w-1/2',
+  large: 'w-full',
   success: 'bg-emerald-100 text-emerald-800 border-emerald-800',
   warning: 'bg-yellow-100 text-yellow-800 border-yellow-800',
   error: 'bg-red-100 text-red-800 border-red-800',
   info: 'bg-blue-100 text-blue-800 border-blue-800',
 } as const;
 
-export declare interface IDefaultAlertProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export declare interface IDefaultAlertProps extends React.HTMLAttributes<HTMLDivElement> {
   type?: 'success' | 'warning' | 'error' | 'info';
   color?: 'primary';
   message: string;
@@ -42,9 +41,7 @@ export const DefaultAlert: React.FC<IDefaultAlertProps> = ({
       role="alert"
     >
       <div className="flex items-center">
-        <span className="mr-2 font-bold">
-          {type.charAt(0).toUpperCase() + type.slice(1)}:
-        </span>
+        <span className="mr-2 font-bold">{type.charAt(0).toUpperCase() + type.slice(1)}:</span>
         <p>{message}</p>
       </div>
     </div>

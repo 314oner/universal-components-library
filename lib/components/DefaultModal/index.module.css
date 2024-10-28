@@ -7,8 +7,3 @@
   overflow-y: auto;
   z-index: 9999;
 }
-
-.DefaultModal_dark {
-  color: inherit;
-  background-color: inherit;
-}

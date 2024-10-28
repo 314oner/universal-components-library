@@ -1,6 +1,6 @@
 .DefaultTag {
   display: inline-flex;
-  color: white; /* TODO: invert */
+  color: white;
   background-color: rgba(67, 133, 0, 1);
   border-color: rgba(67, 133, 0, 1);
   border-width: 2px;
@@ -16,10 +16,6 @@
 }
 
 .DefaultTag:hover {
-  background-color: rgba(67, 133, 0, 0.5);
-}
-
-.DefaultTag_dark {
-  color: inherit;
-  background-color: inherit;
+  background-color: rgba(67, 133, 0, 0.9);
+  border-color: rgba(67, 133, 0, 0.9);
 }
