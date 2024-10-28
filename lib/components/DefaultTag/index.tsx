@@ -7,18 +7,13 @@ import styles from './index.module.css';
 
 const variants = {
   primary: styles.DefaultTag,
-  dark: styles.DefaultTag_dark,
-  small: 'inline-block',
-  medium: 'w-64',
-  large: 'w-96',
 } as const;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export declare interface IDefaultTagProps extends React.HTMLAttributes<any> {
   text: string;
-  onRemove: () => void;
-  color?: 'primary' | 'dark';
-  size?: 'small' | 'medium' | 'large';
+  onRemove?: () => void;
+  color?: 'primary';
 }
 
 export const DefaultTag: React.FC<IDefaultTagProps> = ({
@@ -32,11 +27,7 @@ export const DefaultTag: React.FC<IDefaultTagProps> = ({
     <div>
       <span
         className={twMerge(
-          clsx(
-            variants[color as keyof typeof variants],
-            variants[size as keyof typeof variants],
-            className,
-          ),
+          clsx(variants[color as keyof typeof variants], className),
         )}
       >
         {text}

@@ -5,16 +5,14 @@ import styles from './index.module.css';
 
 const variants = {
   primary: styles.DefaultModal,
-  dark: styles.DefaultModal_dark,
 } as const;
 
-export declare interface IDefaultModalProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export declare interface IDefaultModalProps extends React.HTMLAttributes<HTMLDivElement> {
   isOpen: boolean;
-  onClose: () => void;
+  onClose?: () => void;
   title: string;
   children: React.ReactNode;
-  color?: 'primary' | 'dark';
+  color?: 'primary';
 }
 
 export const DefaultModal: React.FC<IDefaultModalProps> = ({
@@ -28,9 +26,7 @@ export const DefaultModal: React.FC<IDefaultModalProps> = ({
   if (!isOpen) return null;
   return (
     <div
-      className={twMerge(
-        clsx(variants[color as keyof typeof variants], className),
-      )}
+      className={twMerge(clsx(variants[color as keyof typeof variants], className))}
       id="my-modal"
     >
       <div className="relative p-5 mx-auto bg-white border rounded-lg shadow-lg top-20 w-96 dark:bg-gray-700">

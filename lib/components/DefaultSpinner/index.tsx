@@ -7,8 +7,7 @@ import styles from './index.module.css';
 
 const variants = {
   primary: styles.DefaultSpinner,
-  dark: styles.DefaultSpinner_dark,
-  blue: 'text-[#0B2447] dark:text-blue-500',
+  blue: 'text-blue-700 dark:text-blue-500',
   green: 'text-emerald-600 dark:text-emerald-400',
   red: 'text-red-600 dark:text-red-400',
   yellow: 'text-yellow-600 dark:text-yellow-400',
@@ -19,28 +18,29 @@ const variants = {
 
 export declare interface IDefaultSpinnerProps
   extends React.HTMLAttributes<HTMLDivElement> {
-  color?: 'primary' | 'dark' | 'blue' | 'green' | 'red' | 'yellow';
-  size?: 'small' | 'medium' | 'large';
+  base?: 'primary';
+  color: 'blue' | 'green' | 'red' | 'yellow';
+  size: 'small' | 'medium' | 'large';
 }
 
 export const DefaultSpinner: React.FC<IDefaultSpinnerProps> = ({
-  color = 'primary',
+  base = 'primary',
   className = styles.DefaultSpinner,
+  color,
   size,
-  ...rest
 }) => {
   const animationFlow = 'animate-spin';
   return (
     <div
       className={twMerge(
         clsx(
-          variants[color as keyof typeof variants],
+          variants[base as keyof typeof variants],
           variants[size as keyof typeof variants],
+          variants[color as keyof typeof variants],
           className,
           animationFlow,
         ),
       )}
-      {...rest}
     >
       <svg
         className="w-full h-full"

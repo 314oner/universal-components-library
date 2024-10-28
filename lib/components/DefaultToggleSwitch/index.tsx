@@ -7,25 +7,20 @@ import styles from './index.module.css';
 
 const variants = {
   primary: styles.DefaultToggleSwitch,
-  dark: styles.DefaultToggleSwitch_dark,
-  small: 'w-32',
-  medium: 'w-64',
-  large: 'w-96',
 } as const;
 //@ts-ignore
 export declare interface IDefaultToggleSwitchProps
   extends React.HTMLAttributes<HTMLDivElement> {
-  color?: 'primary' | 'dark';
-  size?: 'small' | 'medium' | 'large';
+  base?: 'primary';
   initialChecked: boolean;
   label: string;
-  onChange: (checked: boolean) => void;
+  onChange?: (checked: boolean) => void;
 }
 export const DefaultToggleSwitch: React.FC<IDefaultToggleSwitchProps> = ({
   label,
   onChange,
   initialChecked = false,
-  color = 'primary',
+  base = 'primary',
   className = styles.DefaultToggleSwitch,
 }) => {
   const [checked, setChecked] = useState(initialChecked);
@@ -36,12 +31,12 @@ export const DefaultToggleSwitch: React.FC<IDefaultToggleSwitchProps> = ({
     if (onChange) onChange(newChecked);
   };
   return (
-    <div>
-      <label
-        className={twMerge(
-          clsx(variants[color as keyof typeof variants], className),
-        )}
-      >
+    <div
+      className={twMerge(
+        clsx(variants[base as keyof typeof variants], className),
+      )}
+    >
+      <label>
         <input
           type="checkbox"
           className="sr-only peer"

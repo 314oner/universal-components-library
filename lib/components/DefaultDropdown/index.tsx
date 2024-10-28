@@ -6,10 +6,9 @@ import styles from './index.module.css';
 
 const variants = {
   primary: styles.DefaultDropdown,
-  dark: styles.DefaultDropdown_dark,
-  small: 'w-32',
-  medium: 'w-64',
-  large: 'w-96',
+  small: 'w-64',
+  medium: 'w-1/2',
+  large: 'w-full',
 } as const;
 
 //@ts-ignore
@@ -17,7 +16,7 @@ export declare interface IDefaultDropdownProps extends React.HTMLAttributes<HTML
   options: string[];
   onSelect: (option: string) => void;
   placeholder: string;
-  color?: 'primary' | 'dark';
+  color?: 'primary';
   size?: 'small' | 'medium' | 'large';
 }
 

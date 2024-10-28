@@ -7,8 +7,8 @@ const variants = {
   primary: styles.DefaultButton,
   dark: styles.DefaultButton_dark,
   small: 'inline-block',
-  medium: 'w-64',
-  large: 'w-96',
+  medium: 'w-1/2',
+  large: 'w-full',
   cyan: 'text-[#06B6D4] dark:text-[#22D3EE] border-[#06B6D4] dark:border-[#22D3EE] shadow-[7px_7px_0px_0px_#06B6D4] dark:shadow-[7px_7px_0px_0px_#22D3EE] hover:shadow-none',
   blue: 'text-[#60A5FA] dark:text-[#93C5FD] border-[#60A5FA] dark:border-[#93C5FD] shadow-[7px_7px_0px_0px_#60A5FA] dark:shadow-[7px_7px_0px_0px_#93C5FD] hover:shadow-none',
   yellow:

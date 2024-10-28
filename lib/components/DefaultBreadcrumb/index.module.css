@@ -1,7 +1,3 @@
 .DefaultBreadcrumb {
   display: flex;
 }
-.DefaultBreadcrumb_dark {
-  color: inherit;
-  background-color: inherit;
-}

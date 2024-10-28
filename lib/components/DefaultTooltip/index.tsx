@@ -8,10 +8,9 @@ const variants = {
   dark: styles.DefaultTooltip_dark,
 } as const;
 
-export declare interface IDefaultTooltipProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export declare interface IDefaultTooltipProps extends React.HTMLAttributes<HTMLDivElement> {
   text: string;
-  color?: 'primary' | 'dark';
+  color?: 'primary';
 }
 
 export const DefaultTooltip: React.FC<IDefaultTooltipProps> = ({
@@ -22,11 +21,7 @@ export const DefaultTooltip: React.FC<IDefaultTooltipProps> = ({
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   return (
-    <div
-      className={twMerge(
-        clsx(variants[color as keyof typeof variants], className),
-      )}
-    >
+    <div className={twMerge(clsx(variants[color as keyof typeof variants], className))}>
       <div
         onMouseEnter={() => setIsVisible(true)}
         onMouseLeave={() => setIsVisible(false)}

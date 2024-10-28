@@ -5,15 +5,14 @@ import styles from './index.module.css';
 
 const variants = {
   primary: styles.DefaultAccordion,
-  dark: styles.DefaultAccordion_dark,
-  small: 'inline-block',
-  medium: 'w-64',
-  large: 'w-96',
+  small: 'w-1/3',
+  medium: 'w-min',
+  large: 'w-full',
 } as const;
 
 export declare interface IDefaultAccordionProps extends React.HTMLAttributes<HTMLDivElement> {
   items: { title: string; content: string }[];
-  color?: 'primary' | 'dark';
+  color?: 'primary';
   size?: 'small' | 'medium' | 'large';
 }
 export const DefaultAccordion: React.FC<IDefaultAccordionProps> = ({
