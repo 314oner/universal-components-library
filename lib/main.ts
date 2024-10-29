@@ -13,8 +13,6 @@ export { DefaultRadioButton } from './components/DefaultRadioButton';
 export { DefaultSpinner } from './components/DefaultSpinner';
 export { DefaultTag } from './components/DefaultTag';
 export { DefaultToggleSwitch } from './components/DefaultToggleSwitch';
-export { DefaultToggleSwitch2 } from './components/DefaultToggleSwitch2';
-export { DefaultToggleSwitch3 } from './components/DefaultToggleSwitch3';
 export { DefaultTooltip } from './components/DefaultTooltip';
 export { Input } from './components/Input';
 export { Label } from './components/Label';
