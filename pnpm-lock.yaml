@@ -7,13 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      clsx:
-        specifier: ^2.0.0
-        version: 2.1.1
-      tailwind-merge:
-        specifier: ^2.1.0
-        version: 2.5.3
     devDependencies:
       '@storybook/addon-actions':
         specifier: ^7.6.5
@@ -120,6 +113,9 @@ importers:
       c8:
         specifier: ^7.12.0
         version: 7.14.0
+      clsx:
+        specifier: ^2.0.0
+        version: 2.1.1
       eslint:
         specifier: ^8.55.0
         version: 8.57.1
@@ -186,6 +182,9 @@ importers:
       storybook:
         specifier: ^7.6.5
         version: 7.6.20
+      tailwind-merge:
+        specifier: ^2.1.0
+        version: 2.5.3
       tailwindcss:
         specifier: ^3.3.6
         version: 3.4.13

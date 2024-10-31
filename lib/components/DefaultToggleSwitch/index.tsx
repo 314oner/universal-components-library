@@ -1,9 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import clsx from 'clsx';
 import React, { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-
+import styles from './index.module.css';
 const variants = {
+  primary: styles.DefaultToggleSwitch,
   small: 'h-7 w-14 min-w-14',
   medium: 'h-14 w-28 min-w-28',
   large: 'h-28 w-56 min-w-56',
@@ -15,22 +17,24 @@ const variants = {
 
 //@ts-ignore
 export declare interface IDefaultToggleSwitchProps extends React.HTMLAttributes<never> {
+  base?: 'primary';
   size?: 'small' | 'medium' | 'large';
   color?: 'green' | 'yellow' | 'red' | 'blue';
   initialChecked?: boolean;
   label?: string;
+  handleToggle: any;
   onChange: (checked: boolean) => void;
 }
 export const DefaultToggleSwitch = React.forwardRef<HTMLInputElement, IDefaultToggleSwitchProps>(
   (
     {
       initialChecked = false,
-      className,
+      className = styles.DefaultToggleSwitch,
       color = 'success',
       label,
       size = 'small',
       onChange,
-      ...rest
+      base = 'primary',
     },
     ref,
   ) => {
@@ -49,7 +53,7 @@ export const DefaultToggleSwitch = React.forwardRef<HTMLInputElement, IDefaultTo
     const switchInnerStyle = `absolute top-1 left-1 bg-[#0B2447] dark:bg-white rounded-full ${size !== 'small' ? (size !== 'medium' ? 'h-24 w-24' : 'h-12 w-12') : 'h-5 w-5'} transition-all duration-300 ${checked ? (size !== 'small' ? (size !== 'medium' ? 'translate-x-28' : 'translate-x-14') : 'translate-x-7 ') : ''}`;
     return (
       <>
-        <label className="relative inline-flex items-center cursor-pointer">
+        <label className={twMerge(clsx(variants[base as keyof typeof variants]))}>
           <input
             type="checkbox"
             ref={ref}
@@ -57,16 +61,15 @@ export const DefaultToggleSwitch = React.forwardRef<HTMLInputElement, IDefaultTo
             checked={checked}
             onClick={handleClick}
             onChange={handleChange}
-            {...rest}
           />
           <div
             className={twMerge(
+              switchOuterStyle,
               clsx(
-                switchOuterStyle,
                 variants[size as keyof typeof variants],
                 variants[color as keyof typeof variants],
-                className,
               ),
+              className,
             )}
           >
             <div className={switchInnerStyle}></div>
