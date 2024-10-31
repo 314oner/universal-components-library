@@ -1,7 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-
 import clsx from 'clsx';
-import React, { forwardRef, useState } from 'react';
+import React, { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 import styles from './index.module.css';
 const variants = {
@@ -22,9 +22,10 @@ export declare interface IDefaultToggleSwitchProps extends React.HTMLAttributes<
   color?: 'green' | 'yellow' | 'red' | 'blue';
   initialChecked?: boolean;
   label?: string;
+  handleToggle: any;
   onChange: (checked: boolean) => void;
 }
-export const DefaultToggleSwitch = forwardRef<HTMLInputElement, IDefaultToggleSwitchProps>(
+export const DefaultToggleSwitch = React.forwardRef<HTMLInputElement, IDefaultToggleSwitchProps>(
   (
     {
       initialChecked = false,

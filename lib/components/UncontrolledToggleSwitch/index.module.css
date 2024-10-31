@@ -1,0 +1,6 @@
+.UncontrolledToggleSwitch {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+}
