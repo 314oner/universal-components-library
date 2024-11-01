@@ -18,4 +18,5 @@ export { Input } from './components/Input';
 export { Label } from './components/Label';
 export { PrimeToggleButton } from './components/PrimeToggleButton';
 export { RefButton as DefaultLongButton, RefButton } from './components/RefButton';
+export { StaticToggleButton } from './components/StaticToggleButton';
 export { UncontrolledToggleSwitch } from './components/UncontrolledToggleSwitch';
