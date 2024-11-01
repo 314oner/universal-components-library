@@ -70,7 +70,12 @@ export const PrimeToggleButton = React.forwardRef<HTMLInputElement, IPrimeToggle
           }}
           {...props}
         />
-        <div className={`w-4 h-4 rounded-full ${switchColors.button.default}`} />
+        {/*<div className={`w-4 h-4 rounded-full ${switchColors.button.default}`} />*/}
+        <div className={cn(
+          `w-4 h-4 rounded-full bg-white dark:bg-black`,
+          className,
+        )}
+        />
       </label>
     );
   },
