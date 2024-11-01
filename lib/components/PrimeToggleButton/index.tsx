@@ -42,13 +42,11 @@ export const PrimeToggleButton = React.forwardRef<HTMLInputElement, IPrimeToggle
       }
     }, [propChecked]);
     const internalRef = React.useRef<HTMLInputElement | null>(null);
+    const renderOuterStyle = `relative inline-block group/switch rounded-full p-1 has-[input[type=checkbox]:not(:checked)]:pr-5 has-[input[type=checkbox]:checked]:pl-5 ${switchColors.background.default} ${switchColors.background.hover} ${switchColors.background.checked} ${switchColors.background.checkedHover} ${switchColors.background.disabled} ${switchColors.background.disabledHover} ${switchColors.background.disabledChecked} ${switchColors.background.disabledCheckedHover} has-[input[type=checkbox]:disabled]:cursor-not-allowed transition-all duration-200 ease-in-out`;
     return (
       <label
         htmlFor={`primeToggleButtonId`}
-        className={cn(
-          `relative inline-block group/switch rounded-full p-1 has-[input[type=checkbox]:not(:checked)]:pr-5 has-[input[type=checkbox]:checked]:pl-5 ${switchColors.background.default} ${switchColors.background.hover} ${switchColors.background.checked} ${switchColors.background.checkedHover} ${switchColors.background.disabled} ${switchColors.background.disabledHover} ${switchColors.background.disabledChecked} ${switchColors.background.disabledCheckedHover} has-[input[type=checkbox]:disabled]:cursor-not-allowed transition-all duration-200 ease-in-out`,
-          className,
-        )}
+        className={cn(renderOuterStyle, className)}
       >
         <input
           id={`primeToggleButtonId`}
@@ -71,11 +69,7 @@ export const PrimeToggleButton = React.forwardRef<HTMLInputElement, IPrimeToggle
           {...props}
         />
         {/*<div className={`w-4 h-4 rounded-full ${switchColors.button.default}`} />*/}
-        <div className={cn(
-          `w-4 h-4 rounded-full bg-white dark:bg-black`,
-          className,
-        )}
-        />
+        <div className={cn(`w-4 h-4 rounded-full bg-white dark:bg-black`, className)} />
       </label>
     );
   },
