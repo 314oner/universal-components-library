@@ -16,6 +16,5 @@ export { DefaultToggleSwitch } from './components/DefaultToggleSwitch';
 export { DefaultTooltip } from './components/DefaultTooltip';
 export { Input } from './components/Input';
 export { Label } from './components/Label';
-export { PrimeToggleButton } from './components/PrimeToggleButton';
 export { RefButton as DefaultLongButton, RefButton } from './components/RefButton';
 export { UncontrolledToggleSwitch } from './components/UncontrolledToggleSwitch';

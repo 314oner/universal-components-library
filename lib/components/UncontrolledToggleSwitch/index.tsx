@@ -16,7 +16,6 @@ const variants = {
 
 //@ts-ignore
 export declare interface IUncontrolledToggleSwitchProps extends React.HTMLAttributes<never> {
-  base?: 'primary';
   size?: 'small' | 'medium' | 'large';
   color?: 'green' | 'yellow' | 'red' | 'blue';
   onChange?: (checked: boolean) => void;
@@ -33,7 +32,7 @@ export const UncontrolledToggleSwitch: React.FC<IUncontrolledToggleSwitchProps> 
 }) => {
   const renderLabelStyle = `ml-3 text-sm font-medium text-[#0B2447] dark:text-white`;
   const renderOuterStyle = `w-14 h-7 bg-white dark:bg-gray-700 border-2 border-[#0B2447] dark:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#0B2447]/50 dark:peer-focus:ring-white/50 rounded-full peer transition-all duration-300 ${checked ? 'shadow-[3px_3px_0px_0px_#0B2447] dark:shadow-[3px_3px_0px_0px_#ffffff]' : ''}`;
-  const renderInnerStyle = `!absolute !top-1 !left-1 !bg-green-700 dark:bg-white rounded-full ${size !== 'small' ? (size !== 'medium' ? 'h-24 w-24' : 'h-12 w-12') : 'h-5 w-5'} transition-all duration-300 ${checked ? (size !== 'small' ? (size !== 'medium' ? 'translate-x-28' : 'translate-x-14') : 'translate-x-7 ') : ''}`;
+  const renderInnerStyle = `absolute top-1 left-1 bg-[#0B2447] dark:bg-white rounded-full ${size !== 'small' ? (size !== 'medium' ? 'h-24 w-24' : 'h-12 w-12') : 'h-5 w-5'} transition-all duration-300 ${checked ? (size !== 'small' ? (size !== 'medium' ? 'translate-x-28' : 'translate-x-14') : 'translate-x-7 ') : ''}`;
   const renderLabelStyles = twMerge(`
     ${renderLabelStyle}
     ${className && ''}

@@ -18,25 +18,28 @@ npm install @314oner_npm/universal-components-library
 
 ```ts
 import {
+  DefaultAccordion,
   DefaultAlert,
   DefaultAvatar,
-  DefaultButton,
+  DefaultBadge,
   DefaultBreadcrumb,
+  DefaultButton,
   DefaultCard,
-  DefaultDropdown,
   DefaultCheckbox,
+  DefaultDropdown,
+  DefaultInput,
   DefaultModal,
   DefaultRadioButton,
   DefaultSpinner,
-  DefaultInput,
+  DefaultTag,
   DefaultToggleSwitch,
+  DefaultTooltip,
   DefaultLongButton,
   Input,
   Label,
   RefButton,
-  DefaultBadge,
-  DefaultTooltip
-} from "@314oner_npm/universal-components-library";
+  UncontrolledToggleSwitch,
+} from '@314oner_npm/universal-components-library';
 ```
 
 ### :hammer_and_wrench: Languages and Tools :
